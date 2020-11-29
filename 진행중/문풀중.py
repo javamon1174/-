@@ -4,8 +4,8 @@ import sys
 # 11번 문제 - 뱀
 
 # 0 => 사과 없음, 1 => 사과 있음, 2 => 뱀 위치 배열
-n = 6 # 행/열 수
-k = 3 # 사과 수
+n = 10 # 행/열 수
+k = 4 # 사과 수
 second = 0 # 초 시간
 dummy_map = [[0] * n for _ in range(n)]
 
@@ -15,13 +15,14 @@ snake_map = []
 snake_map.append([0, 0])
 
 # 인풋 반복문
-dummy_map[3][4] = 1
-dummy_map[2][5] = 1
-dummy_map[5][3] = 1
+dummy_map[1][2] = 1
+dummy_map[1][3] = 1
+dummy_map[1][4] = 1
+dummy_map[1][5] = 1
 
-l = 3 # 방향 전환 수
+l = 4 # 방향 전환 수
 # 인풋 반복문
-arr_direct = [[3, 'D'], [15, 'L'], [17, 'D']]
+arr_direct = [[8, 'D'], [10, 'D'], [11, 'D'], [13, 'L']]
 directtion = 1
 
 # 북동남서 정의
@@ -61,5 +62,4 @@ while True:
         snake_map.insert(0, [n_x, n_y])
         snake_map.pop() # 꼬리 삭제
 
-print(snake_map)
 print(second)
